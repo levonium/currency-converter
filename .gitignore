@@ -1,0 +1,11 @@
+/node_modules
+/vendor
+.env
+npm-debug.log
+yarn-error.log
+.vscode/
+/.vscode
+/.idea
+.DS_Store
+dump.rdb
+.php-cs-fixer.cache
