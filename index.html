@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter, kind of.</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <h1>
+      <span id="from-currency" class="loading">$$$</span>
+      <button id="switch">&LeftArrowRightArrow;</button>
+      <span id="to-currency" class="loading">$$$</span>
+    </h1>
+
+    <section>
+      <input id="from" />
+
+      <div class="wrapper">
+        <button class="increase">&UpArrow;</button>
+        <button class="decrease">&DownArrow;</button>
+        <button class="add-zero">&times; 10</button>
+        <button class="remove-zero">&divide; 10</button>
+      </div>
+
+      <input id="to" disabled />
+    </section>
+
+    <button class="reset">&times;</button>
+
+    <script src="app.js" defer type="module"></script>
+  </body>
+</html>
