@@ -35,6 +35,20 @@ body {
   }
 }
 
+.about {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: oklch(0.637 0.237 25.331);
+  background-color: oklch(0.971 0.013 17.38);
+  border: 0 none;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 h1 {
   display: flex;
   align-items: center;

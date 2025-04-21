@@ -14,6 +14,8 @@ A lightweight, browser-based currency converter that allows quick currency conve
     - Switch currencies instantly
 - Persistent storage of your preferences (in the browser)
 - Mobile-friendly interface
+- Works offline (PWA)
+- Installable on mobile devices
 
 ## Usage
 
