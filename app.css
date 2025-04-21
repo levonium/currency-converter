@@ -115,6 +115,7 @@ input {
     border-radius: 6px;
     font-size: 1.6rem;
     transition: background 0.3s ease-in-out;
+    touch-action: manipulation;
 
     &:hover {
       background-color: oklch(0.882 0.059 254.128);

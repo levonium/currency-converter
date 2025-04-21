@@ -51,7 +51,7 @@ const promptData = () => {
   return data
 }
 
-// --- setters
+// -- setters
 
 const setLabels = () => {
   const data = getStoredData()
@@ -59,7 +59,7 @@ const setLabels = () => {
   toLabel.innerText = data.to.code
 }
 
-const setValues = (fromValue = 0) => {
+const setValues = (fromValue = 0, updateFrom = true) => {
   // -- definitions
   const set = (input, formatted, raw) => {
     input.value = formatted
@@ -79,7 +79,9 @@ const setValues = (fromValue = 0) => {
   let data = getStoredData()
   const value = fromValue === 0 ? data.amount : fromValue
 
-  set(fromInput, format(value, data.from), value)
+  if (updateFrom) {
+    set(fromInput, format(value, data.from), value)
+  }
 
   const toValue = convert(value, data.rate)
   set(toInput, format(toValue, data.to), toValue)
@@ -148,6 +150,9 @@ document.getElementById('switch').addEventListener('click', () => {
 })
 
 // -- from input
+fromInput.addEventListener('keyup', (e) => {
+  setValues(fromInput.value.replace(/[^\d.-]/g, ''), false)
+})
 fromInput.addEventListener('change', (e) => {
   setValues(fromInput.value.replace(/[^\d.-]/g, ''))
 })
@@ -162,7 +167,7 @@ resetButton.addEventListener('click', () => {
   setValues()
 })
 
-// --- start
+// -- start
 const start = () => {
   let storedData = getStoredData()
 
